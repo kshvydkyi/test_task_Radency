@@ -52,12 +52,12 @@ const chooseOptimalDistance = (t, k, ls) => {
 
     if (sums[0] > t) return null;
     if (sums[sums.length - 1] < t) return sums[sums.length - 1];
-
+    // console.log(sums)
     for (let i = 0; i < sums.length; i++) {
-        if(sums[i] === sums[i + 1] && sums[i] > t - 1){
+        if(sums[i] === t){
             return sums[i];
         }
-        if (sums[i] > t - 1) {
+        if (sums[i] > t) {
             return sums[i - 1];
         }
     }
@@ -68,4 +68,3 @@ const chooseOptimalDistance = (t, k, ls) => {
 module.exports.chooseOptimalDistance = chooseOptimalDistance;
 chooseOptimalDistance(174, 3, [51, 56, 58, 59, 61]); //173
 chooseOptimalDistance(163, 3, [50]); // null
-

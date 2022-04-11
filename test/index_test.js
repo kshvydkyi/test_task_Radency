@@ -117,7 +117,7 @@ describe("Index.js test", function () {
     })
     it("check that chooseOptimalDistance method returns correct value (t = 122, k = 2)", done => {
         //GIVEN
-        let expectedOptimalDistance = 117;
+        let expectedOptimalDistance = 122;
 
         //WHEN
         let actualOptimalDistance = cod(122, 2, [10, 11, 45, 56, 22, 67, 77, 94, 23])
@@ -139,7 +139,7 @@ describe("Index.js test", function () {
     })
     it("check that chooseOptimalDistance method returns correct value (t = 512, k = 8)", done => {
         //GIVEN
-        let expectedOptimalDistance = 511;
+        let expectedOptimalDistance = 512;
 
         //WHEN
         let actualOptimalDistance = cod(512, 8, [10, 110, 45, 56, 32, 23, 44, 110, 66, 43, 50, 2])
