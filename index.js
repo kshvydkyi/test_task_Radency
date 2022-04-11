@@ -54,6 +54,9 @@ const chooseOptimalDistance = (t, k, ls) => {
     if (sums[sums.length - 1] < t) return sums[sums.length - 1];
 
     for (let i = 0; i < sums.length; i++) {
+        if(sums[i] === sums[i + 1] && sums[i] > t - 1){
+            return sums[i];
+        }
         if (sums[i] > t - 1) {
             return sums[i - 1];
         }
